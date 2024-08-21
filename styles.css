@@ -25,12 +25,12 @@ body, html {
     width: 100%;
     height: 100px;
     overflow: hidden;
-    z-index: 0; /* Behind the logo */
-    animation: float 7s ease-in-out infinite; /* Apply animation */
+    z-index: 0;
+    animation: float 7s ease-in-out infinite;
 }
 @keyframes float {
     0% { transform: translateY(0); }
-    50% { transform: translateY(30px); } /* Adjust the float distance as needed */
+    50% { transform: translateY(30px); }
     100% { transform: translateY(0); }
 }
 .clouds svg {
@@ -74,18 +74,18 @@ h1 {
     background: url('iphone15pro-mockup.webp') no-repeat center center;
     background-size: contain;
     z-index: 2;
-    pointer-events: none; /* Allows interactions to pass through */
+    pointer-events: none;
 }
 
 .slider {
     position: absolute;
-    top: 4.5%; /* Adjust this value to fit the screen of the mockup */
+    top: 4.5%;
     left: 8%;
     width: 84%;
     height: 91%;
     overflow: hidden;
     border-radius: 30px;
-    z-index: 1; /* Ensure slider is behind the mockup */
+    z-index: 1;
     animation: wiggle 1s ease-in-out;
 }
 .slider.initial-wiggle {
@@ -94,7 +94,7 @@ h1 {
 
 .slides {
     display: flex;
-    transition: transform 0.3s ease; /* Smooth transition for slide movement */
+    transition: transform 0.3s ease;
 }
 
 .wallpaper {
@@ -135,10 +135,10 @@ h1 {
     cursor: pointer;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    position: relative; /* Added to position pseudo-element correctly */
-    overflow: hidden; /* Ensures no overflow issues */
-    width: 200px; /* Set a fixed width */
-    height: 40px; /* Set a fixed height to ensure consistency */
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 40px;
     box-sizing: border-box;
     box-shadow: 0 0px 56px #2d526844;
 }
@@ -161,22 +161,15 @@ h1 {
 }
 
 #downloadBtn .default-text {
-    display: block; /* Show default text */
+    display: block; 
 }
 
 #downloadBtn.downloading .default-text {
-    display: none; /* Hide default text when downloading */
+    display: none; 
 }
 
-/* #downloadBtn:hover {
-    
-    background-color: #7abdff;
-    box-shadow: 0 0px 56px #0a84ff93;
-    box-shadow: 0 0px 56px #0a84ff93;
-    transition-duration: 0.3s;
-} */
 
-/* Footer Styles */
+
 .footer {
     position: relative;
     width: 100%;
@@ -188,20 +181,21 @@ h1 {
 .footer-image {
     width: 100%;
     height: auto;
-    display: block; /* Removes any inline spacing */
+    display: block; 
     margin: 0; 
     padding: 0; 
 }
 
 .footer-text {
     background-color: #2A6783; 
-    color: white;
+    color: rgba(255, 255, 255, 0.683);
     padding: 20px;
     text-align: center;
     margin: 0; 
     border: 0; 
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 @keyframes wiggle {
@@ -216,38 +210,25 @@ h1 {
     height: auto;
 }
 
-.clickable-area {
-    position: absolute;
-    top: 50%; 
-    left: 60%;
-    width: 50px; 
-    height: 50px; 
-    cursor: pointer;
-    
-    /* outline: 2px solid red; Debug */ 
-}
-
-
 .additional-section {
     text-align: center;
-    margin: 20px 0; /* Adjust the margin as needed */
+    margin: 20px 0;
 }
 
 .wavy-line {
     display: block;
-    padding-top: 60px;
+    padding-top: -5px;
     padding-bottom: 40px;
-    margin: 0 auto; /* Center the image */
-    width: 90%; /* Adjust the width as needed */
-    max-width: 500px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
 }
 
 .additional-text {
-    font-size: 1em;
+    font-size: 20px;
     color: #2d5268;
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    /* font-weight: 800; */
     padding: 6px;
 }
 
@@ -266,7 +247,7 @@ h1 {
 }
 
 .visit-button:hover {
-    background-color: #528ca3; /* Adjust hover color as needed */
+    background-color: #528ca3;
 }
 
 
@@ -277,27 +258,7 @@ h1 {
     top: 4px; 
 }
 
-#lottie-arrow {
-    position: absolute;
-    left: 62%; /* Adjust as needed */
-    top: 18%; /* Adjust as needed */
-    width: 60px; /* Adjust as needed */
-    height: 60px; /* Adjust as needed */
-    pointer-events: none; /* Ensures the Lottie animation doesn't interfere with clicks */
-    transform: translate(-50%, -50%) rotate(213deg);
-    opacity: 75%;
-}
 
-.lottie-moo {
-    position: absolute;
-    top: 116px; /* Adjust this value to position the animation correctly */
-    left: 260px; /* Adjust this value to position the animation correctly */
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
-    pointer-events: none; /* Allow clicks to pass through */
-    transform: translate(-50%, -50%) rotate(213deg);
-    visibility: hidden;
-}
 
 
 
