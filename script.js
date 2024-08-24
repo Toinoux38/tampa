@@ -5,30 +5,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const rightButton = document.querySelector('.right-button');
     const downloadBtn = document.getElementById('downloadBtn');
     const confirmationSound = document.getElementById('confirmationSound');
+    const footerText = document.querySelector('.footer-text');
     let currentIndex = 0;
     let startX, currentX;
+
+    const clickSound = new Audio('thanos.mp3'); // Add the path to your click sound file here
 
     slider.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX; 
     });
 
-    // handle touch move
     slider.addEventListener('touchmove', (e) => {
         currentX = e.touches[0].clientX; 
         const diffX = currentX - startX; 
 
-        
         slider.style.transform = `translateX(${(currentIndex * -100) + (diffX / slider.clientWidth) * 100}%)`;
     });
 
-    // handle touch end
     slider.addEventListener('touchend', (e) => {
         const diffX = currentX - startX; 
 
         if (diffX < -50) {
-            showNextWallpaper(); // swipe left
+            showNextWallpaper();
         } else if (diffX > 50) {
-            showPreviousWallpaper(); // swipe right
+            showPreviousWallpaper();
         } else {
             resetSliderPosition();
         }
@@ -62,11 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
         showNextWallpaper();
     });
 
-
     downloadBtn.addEventListener('click', () => {
-
         confirmationSound.play();
         downloadBtn.classList.add('downloading');
+
         setTimeout(() => {
             const currentWallpaper = wallpapers[currentIndex].src;
             const link = document.createElement('a');
@@ -78,12 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.removeChild(link);
 
             downloadBtn.classList.remove('downloading');
-        }, 1000); 
+
+            // Smooth scroll to the footer text
+            footerText.scrollIntoView({ behavior: 'smooth' });
     });
 
+    // Add click event to each wallpaper to play sound
     
-});
-
-
-
-
+})});
