@@ -250,7 +250,10 @@ h1 {
     background-color: #528ca3;
 }
 
-
+.prettytext{
+    opacity: 0%;
+    position: fixed;
+}
 .icon{
     position: relative;
     height: 1.5em;
